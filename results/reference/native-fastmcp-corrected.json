@@ -1,0 +1,33 @@
+{
+  "adapter": "fastmcp",
+  "collected": 25,
+  "configuration": {
+    "asyncio_mode": "auto",
+    "automatic_plugin_loading": false,
+    "plugins": [
+      "pytest_asyncio.plugin"
+    ]
+  },
+  "counts": {
+    "deselected": 0,
+    "error": 0,
+    "failed": 0,
+    "passed": 25,
+    "skipped": 0,
+    "warnings": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "expected_count": 25,
+  "mode": "corrected",
+  "package_tree_sha256": "d82baa24c7a9364756205de4e9a3a1c6e32f05336fed9adabba3b867df2619be",
+  "pytest_exit_code": 0,
+  "python": "3.12.14",
+  "scope": "selected unchanged native test modules; ancestor conftest excluded",
+  "source_pin": "92e44ffcc04b29f960a6c678f44fac226ccc0ea6",
+  "success": true,
+  "test_files": {
+    "tests/server/providers/openapi/test_whole_body_parameter_collisions.py": "781cdcd02c1dff50ae082d595db6d6d62168d535c751eb44a74231248fe37b96"
+  },
+  "verified_python_file_count": 258
+}

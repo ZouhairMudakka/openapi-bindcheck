@@ -1,0 +1,12 @@
+{
+  "archives": [
+    {"name": "adk", "url": "https://codeload.github.com/google/adk-python/zip/044a1ec3f434cf2e3f7acfdbd52305b60d16f6e5", "sha256": "840a2206a312e06cbce09146ab9d7285e39ea8283347c978ab078a634d71564c", "directory": "adk-python-044a1ec3f434cf2e3f7acfdbd52305b60d16f6e5"},
+    {"name": "fastmcp", "url": "https://codeload.github.com/PrefectHQ/fastmcp/zip/92e44ffcc04b29f960a6c678f44fac226ccc0ea6", "sha256": "244d5194f02961360d855ca3144f329fbd11874c9f0b8bca29a053c5c278193a", "directory": "fastmcp-92e44ffcc04b29f960a6c678f44fac226ccc0ea6"}
+  ],
+  "files": [
+    {"name": "ow-LICENSE", "url": "https://raw.githubusercontent.com/open-webui/open-webui/8bd8b4fac5e059578ac0c74b3c18d11139f88b7d/LICENSE", "sha256": "5f1bd74c48bf13ab0f82e177ad9e637313b92533d20ead2593d49347a47fc232"},
+    {"name": "ow-tools.py", "url": "https://raw.githubusercontent.com/open-webui/open-webui/8bd8b4fac5e059578ac0c74b3c18d11139f88b7d/backend/open_webui/utils/tools.py", "sha256": "ae4fc82448f914863a770bb105591f5c161a372b16bcbf40014f22b28c8bc9b9"},
+    {"name": "keycloak-openapi.json", "url": "https://www.keycloak.org/docs-api/26.7.4/rest-api/openapi.json", "sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db"},
+    {"name": "keycloak-LICENSE.txt", "url": "https://raw.githubusercontent.com/keycloak/keycloak/aa9fe3fba0c6cd5770f19a49378c55f4378cf544/LICENSE.txt", "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"}
+  ]
+}

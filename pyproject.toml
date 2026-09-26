@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openapi-bindcheck"
+version = "0.1.0"
+description = "Reproducible checks of argument binding from OpenAPI tools to HTTP requests"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Zouhair Mudakka"}]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/ZouhairMudakka/openapi-bindcheck"
+Issues = "https://github.com/ZouhairMudakka/openapi-bindcheck/issues"
+
+[project.scripts]
+openapi-bindcheck = "openapi_bindcheck.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

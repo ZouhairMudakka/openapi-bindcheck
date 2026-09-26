@@ -1,0 +1,77 @@
+{
+  "normalization": "ephemeral 127.0.0.1 ports replaced with 0; summary input hashes identify raw bytes",
+  "files": {
+    "adk-ablation-aliases.json": {
+      "raw_sha256": "f963802502870861d3fd8b8077c059048743ab7e54a54534190f502d6804c904",
+      "reference_sha256": "b51e9571d7b4bbf11949db31e594c0670c56fc7abc854b66717b8c11eebdab9f"
+    },
+    "adk-ablation-body.json": {
+      "raw_sha256": "02a7e6a85c87c205fbfb2e15a900806cfe88f87fef6104fbfa418f27759e0063",
+      "reference_sha256": "fc6387411c4867f1c3a93d55c572c1f267bda6c9a78a7e78ff00b69de18416c0"
+    },
+    "adk-ablation-both.json": {
+      "raw_sha256": "a7afd6e3bd929f1093e3bda98f9f9ac8067373b87865fda6cef2b92d6c440e6c",
+      "reference_sha256": "5225bea772a32b0cd899696e7e0808f9ceae1552794be2b74ac9740bbff40bc9"
+    },
+    "adk-ablation-original.json": {
+      "raw_sha256": "b49e46813164840f3b91ed0da5e9657b10aa8cb702130dcb95f469e6612be45e",
+      "reference_sha256": "a49ba4b6c41d95fd43e4afe2cc7647b2b7414e46246f1cbfa3c7e671ebf948aa"
+    },
+    "adk-original.json": {
+      "raw_sha256": "3b774e3bbe54bd26b627956b3deb268d1cd542b862b0b81bd1cf722203a267c4",
+      "reference_sha256": "23fabcd7b1f144e0eef29af2e839a6e26806d72a58c60463a46cfe89d45ec9c3"
+    },
+    "controls.json": {
+      "raw_sha256": "fb57f45086642d006209195153e12d379cff5afbc362dba9cc8ce66f62903825",
+      "reference_sha256": "c338d99f3a729556e8fb319be7415ceecd6aa50d90e535bd3cd1db7f17d3aa8d"
+    },
+    "fastmcp-original.json": {
+      "raw_sha256": "e7a91ae5d1bfbde49ff672da2c71d446061686c320a90e486a8ff6e9ab1bc45d",
+      "reference_sha256": "97607e23e261c33268711dedfd48a6cf4860142bf7fa538f48bb88b010232a5e"
+    },
+    "fastmcp-suffix-addendum.json": {
+      "raw_sha256": "0a0dffc423fd236b21f2fcb452d2fcc71f344f3a8c8fa92d30995e06daedf9eb",
+      "reference_sha256": "520bda73a56322c56af00ff4215cce50e96c4330318e2f36449568a9d4fa5f2f"
+    },
+    "fastmcp-suffix-corrected.json": {
+      "raw_sha256": "8b4a30ef198fbcfcc60199a037360f5ef1ae5de8c9f54da4cf80b5f6dde352fc",
+      "reference_sha256": "b2ac4b7af813eb81023f9fffb53f8bbbc1fe52abe0f53926e02cf76297551607"
+    },
+    "native-adk-corrected.json": {
+      "raw_sha256": "af71654d7c102158deaa20cdd26f89c70b5cb43fae5a25d3292ed4db9a20c458",
+      "reference_sha256": "3b94315d1a66913fbc36b54445c6c811a2e0e0502487b28fc470e161248292bd"
+    },
+    "native-adk-original.json": {
+      "raw_sha256": "84168ad4f3361a836431c6c75026f686adede026388d9da97bf1c729b11f05bf",
+      "reference_sha256": "b415450694157ea775e4af13e8b395b17eb4c62c1bea163af749fe28cd802d62"
+    },
+    "native-fastmcp-corrected.json": {
+      "raw_sha256": "f742739c5763ec21063711812b72be64675f11fc72ce088e66ec2266dbf58808",
+      "reference_sha256": "c1e2c296bb70dab64015b74d384c3f5889df3d4fe201e834eeea5b6e7adc53cb"
+    },
+    "native-fastmcp-original.json": {
+      "raw_sha256": "80b4782067996a803a6a4dc0399eef38094749cedc5c848b790aa724ee2acc03",
+      "reference_sha256": "0a3ec0c03b566158a5f5e88ce69e04dda826e509d977b9eb106fced80ad3be28"
+    },
+    "openwebui-original.json": {
+      "raw_sha256": "cafd36f053b7149d3cd61560689c0ccbe54d9dccfd601bb36b61679e710b2c68",
+      "reference_sha256": "2d935b22160c1b9cecb3bfa6b1d38c3e5162eb1970713c40ae8a14f6697fe80a"
+    },
+    "provenance.json": {
+      "raw_sha256": "505a164a464b3b3af297249293fe360ffb0c96d9f912f6670aa809dff68ae571",
+      "reference_sha256": "8b789337e88712f48ade2261e041d3706d774976acbea9962eb5ce37cd42bd1f"
+    },
+    "run-status.json": {
+      "raw_sha256": "c8b94937c9a75118bd4356e678b981ff6206e4a8bb11bd24c323795b5dfbd0dc",
+      "reference_sha256": "c612b6a934bdebfc313c79dc651e40cc341918ef858f0ec7108e44b48d42679e"
+    },
+    "summary.json": {
+      "raw_sha256": "20980d19d50c05dcce5540817549d99e8346fdeccc31932fe1ee203789dd5f55",
+      "reference_sha256": "5343d51151b2cb74a91a82076009ac95c6f2fd64ce4b987cfb6beba268828269"
+    },
+    "verifier-controls.json": {
+      "raw_sha256": "ee4433f8ca98c8139b242321a7e7bc704e69b6892b90356f055205d7cb6ea2ad",
+      "reference_sha256": "a606bd290fd38577e6672fe232c0c4e59f9c62c7cc3b4151e3724fda655837cb"
+    }
+  }
+}

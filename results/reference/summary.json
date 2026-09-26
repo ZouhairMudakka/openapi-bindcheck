@@ -1,0 +1,442 @@
+{
+  "caveat": "Cases overlap across primary reports, controls, and ablations. These counts are diagnostic fixture coverage, not independent samples, production failure rates, or framework rankings.",
+  "report_count": 9,
+  "report_sha256": {
+    "adk-ablation-aliases.json": "f963802502870861d3fd8b8077c059048743ab7e54a54534190f502d6804c904",
+    "adk-ablation-body.json": "02a7e6a85c87c205fbfb2e15a900806cfe88f87fef6104fbfa418f27759e0063",
+    "adk-ablation-both.json": "a7afd6e3bd929f1093e3bda98f9f9ac8067373b87865fda6cef2b92d6c440e6c",
+    "adk-ablation-original.json": "b49e46813164840f3b91ed0da5e9657b10aa8cb702130dcb95f469e6612be45e",
+    "adk-original.json": "3b774e3bbe54bd26b627956b3deb268d1cd542b862b0b81bd1cf722203a267c4",
+    "fastmcp-original.json": "e7a91ae5d1bfbde49ff672da2c71d446061686c320a90e486a8ff6e9ab1bc45d",
+    "fastmcp-suffix-addendum.json": "0a0dffc423fd236b21f2fcb452d2fcc71f344f3a8c8fa92d30995e06daedf9eb",
+    "fastmcp-suffix-corrected.json": "8b4a30ef198fbcfcc60199a037360f5ef1ae5de8c9f54da4cf80b5f6dde352fc",
+    "openwebui-original.json": "cafd36f053b7149d3cd61560689c0ccbe54d9dccfd601bb36b61679e710b2c68"
+  },
+  "reports": [
+    {
+      "cases": [
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_alias",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "array_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_body_only",
+          "pass": true
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_query_omitted",
+          "pass": false
+        },
+        {
+          "failures": [
+            "query"
+          ],
+          "id": "suffix_recollision",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "duplicate_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "keycloak_realm_rename",
+          "pass": true
+        }
+      ],
+      "checked": 7,
+      "failed": 3,
+      "failed_case_ids": [
+        "array_alias",
+        "array_query_omitted",
+        "suffix_recollision"
+      ],
+      "passed": 4,
+      "report": "adk-original.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "path_body_distinct",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "path_body_same_value",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "path_body_renamed",
+          "pass": true
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "keycloak_realm_rename",
+          "pass": false
+        }
+      ],
+      "checked": 4,
+      "failed": 2,
+      "failed_case_ids": [
+        "keycloak_realm_rename",
+        "path_body_distinct"
+      ],
+      "passed": 2,
+      "report": "openwebui-original.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [],
+          "id": "array_alias",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "suffix_recollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "path_body_distinct",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "keycloak_realm_rename",
+          "pass": true
+        }
+      ],
+      "checked": 4,
+      "failed": 0,
+      "failed_case_ids": [],
+      "passed": 4,
+      "report": "fastmcp-original.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_alias",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "array_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_body_only",
+          "pass": true
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_query_omitted",
+          "pass": false
+        },
+        {
+          "failures": [
+            "unrepresentable_bindings",
+            "query"
+          ],
+          "id": "suffix_recollision",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "duplicate_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [
+            "unrepresentable_bindings",
+            "body",
+            "header:array_0"
+          ],
+          "id": "combined_alias_and_body",
+          "pass": false
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "empty_array_alias",
+          "pass": false
+        }
+      ],
+      "checked": 8,
+      "failed": 5,
+      "failed_case_ids": [
+        "array_alias",
+        "array_query_omitted",
+        "combined_alias_and_body",
+        "empty_array_alias",
+        "suffix_recollision"
+      ],
+      "passed": 3,
+      "report": "adk-ablation-original.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [],
+          "id": "array_alias",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_body_only",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_query_omitted",
+          "pass": true
+        },
+        {
+          "failures": [
+            "unrepresentable_bindings",
+            "query"
+          ],
+          "id": "suffix_recollision",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "duplicate_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [
+            "unrepresentable_bindings",
+            "header:array_0"
+          ],
+          "id": "combined_alias_and_body",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "empty_array_alias",
+          "pass": true
+        }
+      ],
+      "checked": 8,
+      "failed": 2,
+      "failed_case_ids": [
+        "combined_alias_and_body",
+        "suffix_recollision"
+      ],
+      "passed": 6,
+      "report": "adk-ablation-body.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_alias",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "array_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_body_only",
+          "pass": true
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "array_query_omitted",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "suffix_recollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "duplicate_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "combined_alias_and_body",
+          "pass": false
+        },
+        {
+          "failures": [
+            "body"
+          ],
+          "id": "empty_array_alias",
+          "pass": false
+        }
+      ],
+      "checked": 8,
+      "failed": 4,
+      "failed_case_ids": [
+        "array_alias",
+        "array_query_omitted",
+        "combined_alias_and_body",
+        "empty_array_alias"
+      ],
+      "passed": 4,
+      "report": "adk-ablation-aliases.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [],
+          "id": "array_alias",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_body_only",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "array_query_omitted",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "suffix_recollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "duplicate_noncollision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "combined_alias_and_body",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "empty_array_alias",
+          "pass": true
+        }
+      ],
+      "checked": 8,
+      "failed": 0,
+      "failed_case_ids": [],
+      "passed": 8,
+      "report": "adk-ablation-both.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [
+            "path",
+            "header:x__path"
+          ],
+          "id": "secondary_alias_collision",
+          "pass": false
+        },
+        {
+          "failures": [],
+          "id": "renamed_header_control",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "header_declaration_absent_control",
+          "pass": true
+        },
+        {
+          "failures": [
+            "path",
+            "unexpected_header:x__path"
+          ],
+          "id": "declared_header_intended_omitted",
+          "pass": false
+        }
+      ],
+      "checked": 4,
+      "failed": 2,
+      "failed_case_ids": [
+        "declared_header_intended_omitted",
+        "secondary_alias_collision"
+      ],
+      "passed": 2,
+      "report": "fastmcp-suffix-addendum.json"
+    },
+    {
+      "cases": [
+        {
+          "failures": [],
+          "id": "secondary_alias_collision",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "renamed_header_control",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "header_declaration_absent_control",
+          "pass": true
+        },
+        {
+          "failures": [],
+          "id": "declared_header_intended_omitted",
+          "pass": true
+        }
+      ],
+      "checked": 4,
+      "failed": 0,
+      "failed_case_ids": [],
+      "passed": 4,
+      "report": "fastmcp-suffix-corrected.json"
+    }
+  ],
+  "scope": "Pinned component/tool-to-wire observations; Open WebUI uses unchanged extracted functions, and Keycloak is a schema-derived local wire specimen, not a live server test.",
+  "verified": true
+}

@@ -1,0 +1,230 @@
+{
+  "cases": [
+    {
+      "arguments": {
+        "x": "P",
+        "x_0": "H",
+        "x_1": "Q"
+      },
+      "id": "reserved_name_order_0",
+      "order": [
+        "path",
+        "query",
+        "header"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "arguments": {
+        "x": "P",
+        "x_0": "H",
+        "x_1": "Q"
+      },
+      "id": "reserved_name_order_1",
+      "order": [
+        "path",
+        "header",
+        "query"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "arguments": {
+        "x": "Q",
+        "x_0": "H",
+        "x_1": "P"
+      },
+      "id": "reserved_name_order_2",
+      "order": [
+        "query",
+        "path",
+        "header"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "arguments": {
+        "x": "Q",
+        "x_0": "H",
+        "x_1": "P"
+      },
+      "id": "reserved_name_order_3",
+      "order": [
+        "query",
+        "header",
+        "path"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "arguments": {
+        "x": "P",
+        "x_0": "H",
+        "x_1": "Q"
+      },
+      "id": "reserved_name_order_4",
+      "order": [
+        "header",
+        "path",
+        "query"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "arguments": {
+        "x": "Q",
+        "x_0": "H",
+        "x_1": "P"
+      },
+      "id": "reserved_name_order_5",
+      "order": [
+        "header",
+        "query",
+        "path"
+      ],
+      "pass": true,
+      "wire": {
+        "body": null,
+        "body_text": "",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Host": "127.0.0.1:0",
+          "User-Agent": "google-adk/2.10.0 (tool: probe)",
+          "x_0": "H"
+        },
+        "method": "POST",
+        "path": "/probe/P",
+        "query": {
+          "x": [
+            "Q"
+          ]
+        },
+        "raw_target": "/probe/P?x=Q"
+      }
+    },
+    {
+      "id": "dot_segment_rejection_with_array_alias",
+      "pass": true,
+      "return_value": {
+        "error": "Tool probe execution failed. Analyze this execution error and your inputs. Retry with adjustments if applicable. But make sure don't retry more than 3 times. Execution Error: Path parameter 'x' must not contain current-directory or parent-directory segments."
+      },
+      "wire": []
+    }
+  ],
+  "mode": "both",
+  "passed": 7,
+  "source_hashes": {
+    "operation_parser": "ca49cbc9ba52f274403afb6717dab93424f1bdc93085ad8d82f99df6e1a1b82b",
+    "rest_api_tool": "be1d70081c7ff35eb83647d80a559b45b5d3d3a75c478198b97b7690c484ff1f"
+  },
+  "source_pin": "044a1ec3f434cf2e3f7acfdbd52305b60d16f6e5",
+  "total": 7
+}

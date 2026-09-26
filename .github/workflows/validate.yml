@@ -1,0 +1,50 @@
+name: Validate binding evidence
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      FASTMCP_CHECK_FOR_UPDATES: 'off'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Create reproduction environment
+        run: |
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $runnerPython = if ($IsWindows) { '.venv/Scripts/python.exe' } else { '.venv/bin/python' }
+          "BINDCHECK_PYTHON=$runnerPython" >> $env:GITHUB_ENV
+      - name: Fetch hash-locked source and install dependencies
+        run: |
+          & $env:BINDCHECK_PYTHON -B experiments/setup.py
+          exit $LASTEXITCODE
+      - name: Verify the independent wire oracle
+        run: |
+          & $env:BINDCHECK_PYTHON -B -m unittest discover -s tests -v
+          exit $LASTEXITCODE
+      - name: Reproduce findings, ablations, and selected native suites
+        run: |
+          & $env:BINDCHECK_PYTHON -B experiments/reproduce.py --native
+          exit $LASTEXITCODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: binding-evidence-${{ matrix.os }}
+          path: results/local/
+          if-no-files-found: ignore

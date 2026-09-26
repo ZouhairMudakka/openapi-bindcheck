@@ -1,0 +1,579 @@
+{
+  "cases": [
+    {
+      "argument_encoding": "complete generated binding",
+      "case_id": "secondary_alias_collision",
+      "declaration": {
+        "description": "Executes POST /probe/{x}",
+        "input_schema": {
+          "properties": {
+            "x__path": {
+              "type": "string"
+            },
+            "x__path_0": {
+              "description": "(Path parameter)",
+              "type": "string"
+            },
+            "x__query": {
+              "description": "(Query parameter)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "x__path_0"
+          ],
+          "type": "object"
+        },
+        "meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "name": "probe",
+        "title": "Probe"
+      },
+      "intended": {
+        "header": {
+          "x__path": "HEADER_SENTINEL"
+        },
+        "path": "/probe/PATH_SENTINEL",
+        "query": {
+          "x": [
+            "QUERY_SENTINEL"
+          ]
+        }
+      },
+      "return_value": {
+        "echo": {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1",
+            "x__path": "HEADER_SENTINEL"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      },
+      "schema_validation_error": null,
+      "spec": {
+        "info": {
+          "title": "Authored binding fixture",
+          "version": "1"
+        },
+        "openapi": "3.0.3",
+        "paths": {
+          "/probe/{x}": {
+            "post": {
+              "operationId": "probe",
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "x",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "query",
+                  "name": "x",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "header",
+                  "name": "x__path",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Echo"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://127.0.0.1:0"
+          }
+        ]
+      },
+      "tool_arguments": {
+        "x__path": "HEADER_SENTINEL",
+        "x__path_0": "PATH_SENTINEL",
+        "x__query": "QUERY_SENTINEL"
+      },
+      "wire_requests": [
+        {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1",
+            "x__path": "HEADER_SENTINEL"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      ]
+    },
+    {
+      "argument_encoding": "complete generated binding",
+      "case_id": "renamed_header_control",
+      "declaration": {
+        "description": "Executes POST /probe/{x}",
+        "input_schema": {
+          "properties": {
+            "x__path": {
+              "description": "(Path parameter)",
+              "type": "string"
+            },
+            "x__query": {
+              "description": "(Query parameter)",
+              "type": "string"
+            },
+            "z": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "x__path"
+          ],
+          "type": "object"
+        },
+        "meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "name": "probe",
+        "title": "Probe"
+      },
+      "intended": {
+        "header": {
+          "z": "HEADER_SENTINEL"
+        },
+        "path": "/probe/PATH_SENTINEL",
+        "query": {
+          "x": [
+            "QUERY_SENTINEL"
+          ]
+        }
+      },
+      "return_value": {
+        "echo": {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1",
+            "z": "HEADER_SENTINEL"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      },
+      "schema_validation_error": null,
+      "spec": {
+        "info": {
+          "title": "Authored binding fixture",
+          "version": "1"
+        },
+        "openapi": "3.0.3",
+        "paths": {
+          "/probe/{x}": {
+            "post": {
+              "operationId": "probe",
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "x",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "query",
+                  "name": "x",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "header",
+                  "name": "z",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Echo"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://127.0.0.1:0"
+          }
+        ]
+      },
+      "tool_arguments": {
+        "x__path": "PATH_SENTINEL",
+        "x__query": "QUERY_SENTINEL",
+        "z": "HEADER_SENTINEL"
+      },
+      "wire_requests": [
+        {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1",
+            "z": "HEADER_SENTINEL"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      ]
+    },
+    {
+      "argument_encoding": "complete generated binding",
+      "case_id": "header_declaration_absent_control",
+      "declaration": {
+        "description": "Executes POST /probe/{x}",
+        "input_schema": {
+          "properties": {
+            "x__path": {
+              "description": "(Path parameter)",
+              "type": "string"
+            },
+            "x__query": {
+              "description": "(Query parameter)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "x__path"
+          ],
+          "type": "object"
+        },
+        "meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "name": "probe",
+        "title": "Probe"
+      },
+      "intended": {
+        "absent_headers": [
+          "x__path"
+        ],
+        "header": {},
+        "path": "/probe/PATH_SENTINEL",
+        "query": {
+          "x": [
+            "QUERY_SENTINEL"
+          ]
+        }
+      },
+      "return_value": {
+        "echo": {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      },
+      "schema_validation_error": null,
+      "spec": {
+        "info": {
+          "title": "Authored binding fixture",
+          "version": "1"
+        },
+        "openapi": "3.0.3",
+        "paths": {
+          "/probe/{x}": {
+            "post": {
+              "operationId": "probe",
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "x",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "query",
+                  "name": "x",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Echo"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://127.0.0.1:0"
+          }
+        ]
+      },
+      "tool_arguments": {
+        "x__path": "PATH_SENTINEL",
+        "x__query": "QUERY_SENTINEL"
+      },
+      "wire_requests": [
+        {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      ]
+    },
+    {
+      "argument_encoding": "complete generated binding",
+      "case_id": "declared_header_intended_omitted",
+      "declaration": {
+        "description": "Executes POST /probe/{x}",
+        "input_schema": {
+          "properties": {
+            "x__path": {
+              "type": "string"
+            },
+            "x__path_0": {
+              "description": "(Path parameter)",
+              "type": "string"
+            },
+            "x__query": {
+              "description": "(Query parameter)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "x__path_0"
+          ],
+          "type": "object"
+        },
+        "meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        },
+        "name": "probe",
+        "title": "Probe"
+      },
+      "intended": {
+        "absent_headers": [
+          "x__path"
+        ],
+        "header": {},
+        "path": "/probe/PATH_SENTINEL",
+        "query": {
+          "x": [
+            "QUERY_SENTINEL"
+          ]
+        }
+      },
+      "return_value": {
+        "echo": {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      },
+      "schema_validation_error": null,
+      "spec": {
+        "info": {
+          "title": "Authored binding fixture",
+          "version": "1"
+        },
+        "openapi": "3.0.3",
+        "paths": {
+          "/probe/{x}": {
+            "post": {
+              "operationId": "probe",
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "x",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "query",
+                  "name": "x",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "in": "header",
+                  "name": "x__path",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Echo"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://127.0.0.1:0"
+          }
+        ]
+      },
+      "tool_arguments": {
+        "x__path_0": "PATH_SENTINEL",
+        "x__query": "QUERY_SENTINEL"
+      },
+      "wire_requests": [
+        {
+          "body": null,
+          "body_text": "",
+          "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "keep-alive",
+            "Content-Length": "0",
+            "Host": "127.0.0.1:0",
+            "User-Agent": "python-httpx2/2.13.1"
+          },
+          "method": "POST",
+          "path": "/probe/PATH_SENTINEL",
+          "query": {
+            "x": [
+              "QUERY_SENTINEL"
+            ]
+          },
+          "raw_target": "/probe/PATH_SENTINEL?x=QUERY_SENTINEL"
+        }
+      ]
+    }
+  ],
+  "repair": {
+    "corrected_function_sha256": "6644dfa89eac172ca5a0969539f0974109450c6206566b5c2d2fa0685c6e9605",
+    "original_source_sha256": "a9e69fbaab8fc0834f4c9affb168a8cfe05662af36a6859236d75ef4e0b97cd5"
+  },
+  "seam": "actual FastMCP.from_openapi + Client.list_tools/call_tool, loopback HTTP echo",
+  "source_pin": "92e44ffcc04b29f960a6c678f44fac226ccc0ea6"
+}

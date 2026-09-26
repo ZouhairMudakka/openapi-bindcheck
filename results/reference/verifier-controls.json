@@ -1,0 +1,121 @@
+{
+  "baseline_reports": 9,
+  "cases": [
+    {
+      "error_type": "ValueError",
+      "id": "request_and_expected_body_both_forged",
+      "reason": "adk-ablation-both.json/array_alias: reported expectation contradicts authored body",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "request_body_forged_saved_contract_empty",
+      "reason": "adk-ablation-both.json/array_alias: changed contract outcome: ['body']",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "request_and_expected_method_both_forged",
+      "reason": "adk-ablation-both.json/array_alias: reported expectation contradicts authored method",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "different_failure_same_failed_case",
+      "reason": "adk-ablation-original.json/array_alias: changed failure/control signature: ['body']",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "json_null_disguised_as_absent_body",
+      "reason": "adk-ablation-original.json/array_alias: expected an absent body, not JSON null",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "omitted_header_leaked_expected_absence_erased",
+      "reason": "fastmcp-suffix-corrected.json/declared_header_intended_omitted: reported expectation contradicts authored absent_headers",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "missing_case",
+      "reason": "adk-ablation-both.json: missing or unexpected case IDs",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "duplicate_case_preserving_count",
+      "reason": "adk-ablation-both.json: duplicate case IDs",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "missing_report",
+      "reason": "Expected exactly the nine named reproduction reports",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "wrong_source_pin",
+      "reason": "adk-ablation-both.json: source pin mismatch",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "wrong_mode",
+      "reason": "adk-ablation-both.json: ablation mode mismatch",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "concealed_alias_collision",
+      "reason": "adk-ablation-original.json/suffix_recollision: wrong collision flag",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "missing_schema_validation",
+      "reason": "adk-ablation-both.json/array_alias: schema error or missing validation result",
+      "rejected": true
+    },
+    {
+      "error_type": "ValidationError",
+      "id": "invalid_arguments_despite_no_recorded_schema_error",
+      "reason": "Additional properties are not allowed ('not_an_exposed_required_path' was unexpected)",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "no_request",
+      "reason": "adk-ablation-both.json/array_alias: expected exactly one request",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "duplicate_request",
+      "reason": "adk-ablation-both.json/array_alias: expected exactly one request",
+      "rejected": true
+    },
+    {
+      "error_type": "ValueError",
+      "id": "raw_decoded_body_disagree",
+      "reason": "adk-ablation-both.json/array_alias: raw and decoded bodies disagree",
+      "rejected": true
+    }
+  ],
+  "mutations_rejected": 17,
+  "saved_pass_flags_ignored": true,
+  "source_report_sha256": {
+    "adk-ablation-aliases.json": "f963802502870861d3fd8b8077c059048743ab7e54a54534190f502d6804c904",
+    "adk-ablation-body.json": "02a7e6a85c87c205fbfb2e15a900806cfe88f87fef6104fbfa418f27759e0063",
+    "adk-ablation-both.json": "a7afd6e3bd929f1093e3bda98f9f9ac8067373b87865fda6cef2b92d6c440e6c",
+    "adk-ablation-original.json": "b49e46813164840f3b91ed0da5e9657b10aa8cb702130dcb95f469e6612be45e",
+    "adk-original.json": "3b774e3bbe54bd26b627956b3deb268d1cd542b862b0b81bd1cf722203a267c4",
+    "fastmcp-original.json": "e7a91ae5d1bfbde49ff672da2c71d446061686c320a90e486a8ff6e9ab1bc45d",
+    "fastmcp-suffix-addendum.json": "0a0dffc423fd236b21f2fcb452d2fcc71f344f3a8c8fa92d30995e06daedf9eb",
+    "fastmcp-suffix-corrected.json": "8b4a30ef198fbcfcc60199a037360f5ef1ae5de8c9f54da4cf80b5f6dde352fc",
+    "openwebui-original.json": "cafd36f053b7149d3cd61560689c0ccbe54d9dccfd601bb36b61679e710b2c68"
+  },
+  "verified": true
+}
