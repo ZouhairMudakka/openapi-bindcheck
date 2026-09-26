@@ -1,8 +1,16 @@
-# openapi-bindcheck
+# openapi-bindcheck: OpenAPI tool-calling regression tests
+
+[![Reproduction checks](https://github.com/ZouhairMudakka/openapi-bindcheck/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/ZouhairMudakka/openapi-bindcheck/actions/workflows/validate.yml)
+
+Test whether OpenAPI-to-agent adapters preserve independent path, query, header, and JSON-body arguments. Includes pinned **Google ADK**, **FastMCP**, and **Open WebUI component** reproductions for dropped arguments and parameter-name collisions.
 
 **Does a schema-valid tool call put each value in the intended HTTP location?**
 
 This repository contains reproducible OpenAPI-to-tool binding findings, a small wire-request oracle, and controlled diagnostic corrections. It exercises pinned Google ADK and FastMCP packages through their actual tool entry points, plus an explicitly bounded Open WebUI component reproduction. No model, API key, or external business service is needed.
+
+Use this when a schema-valid tool call sends the wrong HTTP request, identically named parameters need different values, or you are changing an OpenAPI tool generator's argument mapping.
+
+**Start here:** [Inspect saved results](#quick-inspection-standard-library-only) · [Reproduce from source](#reproduce-from-source) · [Inspect recorded evidence](results/reference/)
 
 Maintained by **Zouhair Mudakka**. Original investigation, fixtures, harness, and documentation were developed with AI assistance. Upstream implementations and established techniques are attributed in [prior work](docs/PRIOR_ART.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
@@ -20,10 +28,12 @@ The contribution is the **specific empirical findings, location-qualified corpus
 
 | Bounded comparison | Original | Diagnostic correction |
 |---|---:|---:|
-| ADK, eight-case ablation corpus | 3/8 | Body-only 6/8; alias-only 4/8; both **8/8** |
-| FastMCP, four-case additional alias corpus | 2/4 | **4/4** |
+| ADK, eight-case ablation corpus | 3/8 (37.5%) | Body-only 6/8; alias-only 4/8; both **8/8 (100%)** |
+| FastMCP, four-case additional alias corpus | 2/4 (50%) | **4/4 (100%)** |
 | Unchanged selected ADK native tests | 131/131 | **131/131** |
 | Unchanged selected FastMCP native tests | 25/25 | **25/25** |
+
+On these selected corpora, the complete diagnostic corrections improve pass rates by **62.5 percentage points for ADK** and **50 points for FastMCP**. These are targeted binding checks, with no measured percentage gain in general agent performance or production cost savings. No correction is supplied for Open WebUI.
 
 The primary comparative run also contains four passing FastMCP baselines, four passing ADK cases and three ADK failures, and two passing/two failing Open WebUI component cases. Some cases appear again in the ablation corpus: **do not add these counts as independent defects or interpret them as framework rankings**. There are three failure families here; the alias family occurs in two implementations.
 
@@ -97,3 +107,10 @@ Archive extraction omits unused upstream symlinks (maintainer documentation link
 **Diagnostic corrections:** the conventional fixes are applied in memory to exact pinned source, with hash and replacement-shape guards. They are not production middleware or supported upstream patches. General OpenAPI serialization, authentication, every content type, all framework tests, and model-provider schema compatibility remain outside scope.
 
 The authored core and harness are MIT-licensed. Downloaded upstream projects and in-memory derived code retain their own terms; Open WebUI's custom license is not relabeled MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Related agent reliability tools
+
+Other focused projects by Zouhair Mudakka, each with its own corpus and limits:
+
+- [a2a-streamcheck](https://github.com/ZouhairMudakka/a2a-streamcheck): A2A client streaming tests for truncated answers and stale replacement text.
+- [agent-expirycheck](https://github.com/ZouhairMudakka/agent-expirycheck): inventory-expiry regression tests for agent business simulators.
